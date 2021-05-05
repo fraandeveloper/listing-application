@@ -1,0 +1,43 @@
+@import '~src/assets/scss/core/mixins/mixins';
+@import '~src/assets/scss/core/variables/variables';
+
+
+:host {
+  @include flex-basis(400px);
+  @include box-shadow(0 0 20px 15px rgba($color-shadow, 0.4));
+}
+
+.aside {
+  background-color: rgb(255 127 80 / 50%);
+  position: relative;
+  @include flexbox();
+  @include flex(1);
+
+  height: 100vh;
+  z-index: 10;
+  &-content {
+    @include flexbox();
+    @include align-items(center);
+    @include flex-direction(column);
+
+    width: 100%;
+    &__image {
+      @include flexbox();
+      @include align-items(center);
+      @include flex-direction(column);
+      @include justify-content(center);
+
+      width: 400px;
+      height: 100%;
+      img {
+        max-width: 400px;
+        width: 100%;
+
+        @include transition(animation 0.5s ease-in-out);
+      }
+    }
+  }
+}
+
+@-webkit-keyframes tilt-in-bottom-1{0%{-webkit-transform:rotateY(30deg) translateY(300px) skewY(-30deg);transform:rotateY(30deg) translateY(300px) skewY(-30deg);opacity:0}100%{-webkit-transform:rotateY(0deg) translateY(0) skewY(0deg);transform:rotateY(0deg) translateY(0) skewY(0deg);opacity:1}}@keyframes tilt-in-bottom-1{0%{-webkit-transform:rotateY(30deg) translateY(300px) skewY(-30deg);transform:rotateY(30deg) translateY(300px) skewY(-30deg);opacity:0}100%{-webkit-transform:rotateY(0deg) translateY(0) skewY(0deg);transform:rotateY(0deg) translateY(0) skewY(0deg);opacity:1}}
+@-webkit-keyframes tilt-in-bottom-2{0%{-webkit-transform:rotateY(-30deg) translateY(300px) skewY(30deg);transform:rotateY(-30deg) translateY(300px) skewY(30deg);opacity:0}100%{-webkit-transform:rotateY(0deg) translateY(0) skewY(0deg);transform:rotateY(0deg) translateY(0) skewY(0deg);opacity:1}}@keyframes tilt-in-bottom-2{0%{-webkit-transform:rotateY(-30deg) translateY(300px) skewY(30deg);transform:rotateY(-30deg) translateY(300px) skewY(30deg);opacity:0}100%{-webkit-transform:rotateY(0deg) translateY(0) skewY(0deg);transform:rotateY(0deg) translateY(0) skewY(0deg);opacity:1}}

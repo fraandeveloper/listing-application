@@ -1,0 +1,19 @@
+@import '~src/assets/scss/core/mixins/mixins';
+@import '~src/assets/scss/core/variables/variables';
+
+.dashboard,
+.workspace,
+.workspace__content {
+  @include flexbox();
+  height: 100%;
+}
+
+.workspace,
+.workspace__content {
+  @include flex(1);
+  overflow: hidden;
+}
+
+.workspace__content {
+  @include flex-direction(column);
+}

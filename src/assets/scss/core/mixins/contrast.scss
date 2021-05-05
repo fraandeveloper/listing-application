@@ -1,0 +1,11 @@
+@mixin contrast_color($color-test) {
+  @if lightness($color-test)>60 {
+    color: initial;
+    background-color: #{$color-test};
+  }
+
+  @else {
+    color: #fff; // Darker background, return light color
+    background-color: #{$color-test};
+  }
+}

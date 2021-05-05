@@ -1,0 +1,88 @@
+$margin-title: 45px 0 40px;
+
+#workspace__route {
+  // @extend %container;
+  padding-bottom: 64px;
+  width: 100%;
+  height: 100%;
+}
+.workspace__scroll-container {
+  overflow-y: scroll;
+  height: 100%;
+  padding: {
+    left: 32px;
+    right: 32px;
+  }
+}
+
+.workspace__actions {
+  @include flexbox();
+  @include justify-content(center);
+  margin: {
+    top: 30px;
+    bottom: 60px;
+  }
+}
+
+.workspace__selecter {
+  @include flexbox();
+  @include align-items(center);
+  @include justify-content(center);
+}
+
+.workspace__container {
+  @include flexbox();
+  @include flex-direction(row);
+  @include align-items(center);
+  @include justify-content(space-between);
+}
+
+.workspace__title {
+  @include flexbox();
+  @include flex-direction(row);
+  @include align-items(center);
+  @include justify-content(center);
+  font-family: $font-roboto-700;
+  @include font-size(32px);
+  font-weight: 400;
+  margin: $margin-title;
+
+  > h2 {
+    @include font-size(24px);
+    font-weight: 400;
+    margin: 0;
+  }
+
+  > strong {
+    font-family: $font-roboto-700;
+    @include font-size(32px);
+    font-weight: 400;
+  }
+
+  > a {
+    @include font-size(20px);
+    font-weight: 400;
+  }
+
+  > tkt-render-svg {
+    margin-right: 10px;
+  }
+
+  &--large {
+    @include font-size(48px);
+  }
+
+  &--center {
+    text-align: center;
+  }
+
+  &--left {
+    @include justify-content(flex-start);
+  }
+}
+
+.slick-slider,
+.slick-track,
+.slick-initialized .slick-slide {
+  width: 100% !important;
+}

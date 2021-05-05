@@ -1,1 +1,11 @@
-<p>main works!</p>
+<section class="dashboard">
+  <app-menu (router)="routerAside($event)"></app-menu>
+
+  <div class="workspace">
+    <app-aside [background]="routerOfImage"></app-aside>
+
+    <div class="workspace__content">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</section>

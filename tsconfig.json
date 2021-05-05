@@ -19,6 +19,9 @@
     "paths": {
       "@main/*": [
         "src/app/main/*"
+      ],
+      "@pages/*": [
+        "src/app/pages/*"
       ]
     }
   },

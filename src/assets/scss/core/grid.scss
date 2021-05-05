@@ -1,0 +1,7 @@
+.dashboard-container {
+    width: $breakpoint-desktop;
+    max-width: 100%;
+    height: 100%;
+    padding: { left: $container-space; right: $container-space; };
+    margin: 0 auto;
+}

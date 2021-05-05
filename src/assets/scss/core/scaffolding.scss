@@ -1,0 +1,50 @@
+@import './src/assets/scss/core/variables/variables';
+@import './src/assets/scss/core/mixins/mixins';
+@import './src/assets/scss/core/placeholders';
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Open+Sans:wght@300;400;600;700&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+* {
+  @include box-sizing();
+  outline: none;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-y: hidden;
+
+  font-family: 'Roboto', sans-serif;
+  color: #000;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  vertical-align: middle;
+}
+
+.tkt-button__DS img {
+  max-width: 100%;
+}
+
+figure {
+  margin: 0;
+}

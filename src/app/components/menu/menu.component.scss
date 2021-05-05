@@ -1,0 +1,65 @@
+@import '~src/assets/scss/core/mixins/mixins';
+@import '~src/assets/scss/core/variables/variables';
+
+.menu {
+  width: 250px;
+  height: 100%;
+
+  background-color: #292e60;
+  &__logo {
+    @include flexbox();
+    @include justify-content(center);
+    @include flex-direction(column);
+
+    width: 100%;
+    height: 100px;
+    padding: 0 24px;
+    p {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 100;
+      @include font-size(18px);
+      color: #fff;
+    }
+  }
+  &__items {
+    @include flexbox();
+    @include flex-direction(column);
+    @include align-items(center);
+    @include justify-content(center);
+    &-content {
+      @include flexbox();
+      @include flex-direction(row);
+      @include align-items(center);
+      @include justify-content(flex-start);
+      @include transition(background-color .3s ease-in);
+
+      width: 100%;
+      padding: 25px;
+      > img {
+        width: 24px;
+        margin: { right: 25px; }
+      }
+      p {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 400;
+        @include font-size(13px);
+        color: #7c809f;
+        @include transition(color .3s ease-in);
+      }
+      &.--active {
+        cursor: pointer;
+        background-color:#222753;
+        p {
+          color: #fbfdff;
+        }
+      }
+      &:hover {
+        cursor: pointer;
+        background-color:#222753;
+        p {
+          color: #fbfdff;
+        }
+      }
+    }
+  }
+}
