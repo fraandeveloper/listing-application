@@ -16,4 +16,5 @@
 
 .workspace__content {
   @include flex-direction(column);
+  @include justify-content(flex-end);
 }

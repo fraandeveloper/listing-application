@@ -2,7 +2,7 @@
   <div class="posts__container">
     <app-card [props]="post" *ngFor="let post of currentItemsToShow"></app-card>
   </div>
-  <div class="container-main__pagination">
+  <div *ngIf="currentItemsToShow.length > 0" class="container-main__pagination">
     <mat-paginator (page)="handlePageEvent($event)" [length]="100" [pageSize]="5" [pageSizeOptions]="[5, 10, 25, 100]">
     </mat-paginator>
   </div>

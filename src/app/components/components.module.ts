@@ -11,6 +11,7 @@ import { MatChipsModule } from '@angular/material/chips';
 import { MatButtonModule } from '@angular/material/button';
 import { MatRippleModule } from '@angular/material/core';
 
+
 @NgModule({
   declarations: [MenuComponent, AsideComponent, CardComponent],
   imports: [CommonModule, RouterModule, MatCardModule, MatChipsModule, MatButtonModule, MatRippleModule],
