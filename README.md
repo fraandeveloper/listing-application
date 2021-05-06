@@ -1,4 +1,4 @@
-# Welcome to List Application!
+# Welcome to Listing Application!
 
 This web application lists the resources of the [{JSON} Placeholder](https://jsonplaceholder.typicode.com/) API.
 Developed with the latest version of angular and material design.
@@ -17,10 +17,10 @@ To install the Angular CLI, open a terminal window and run the following command
 
 The Angular CLI includes a server, so that you can build and serve your app locally.
 
-1.  Navigate to the workspace folder, such as  `list-application`.
+1.  Navigate to the workspace folder, such as  `listing-application`.
     
 2.  Run the following command:
 
-`cd list-application `
+`cd listing-application `
 `$ npm install`
 `$ ng serve`
