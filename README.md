@@ -3,6 +3,8 @@
 This web application lists the resources of the [{JSON} Placeholder](https://jsonplaceholder.typicode.com/) API.
 Developed with the latest version of angular and material design.
 
+![Image](https://i.ibb.co/nPbRhrY/Captura-de-Tela-2021-05-06-a-s-10-57-55.png)
+
 
 # Getting started
 
