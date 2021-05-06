@@ -8,16 +8,20 @@ const routes: Routes = [{
   component: MainComponent,
   children: [{
     path: '',
-    redirectTo: '/posts',
+    redirectTo: '/post',
     pathMatch: 'full',
   }, {
-    path: 'posts',
+    path: 'post',
     loadChildren: () =>
       import('@pages/posts/posts.module').then(m => m.PostsModule),
   }, {
-    path: 'albums',
+    path: 'album',
     loadChildren: () =>
       import('@pages/albums/albums.module').then(m => m.AlbumsModule),
+  }, {
+    path: 'todo',
+    loadChildren: () =>
+      import('@pages/todo/todo.module').then(m => m.TodoModule),
   }]
 }]
 

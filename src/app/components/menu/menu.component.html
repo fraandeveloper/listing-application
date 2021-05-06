@@ -3,15 +3,15 @@
     <p><b>L</b>ist <b>A</b>pplication</p>
   </div>
   <div class="menu__items">
-    <div class="menu__items-content" routerLinkActive="--active" routerLink="/posts" (click)="activeRouter('post')">
+    <div class="menu__items-content" routerLinkActive="--active" routerLink="/post" (click)="activeRouter('post')">
       <img src="assets/icons/post.svg" alt="icon" />
       <p>Posts</p>
     </div>
-    <div class="menu__items-content" routerLinkActive="--active" routerLink="/albums" (click)="activeRouter('albums')">
+    <div class="menu__items-content" routerLinkActive="--active" routerLink="/album" (click)="activeRouter('album')">
       <img src="assets/icons/album.svg" alt="icon" />
       <p>Albums</p>
     </div>
-    <div class="menu__items-content" routerLinkActive="menu__items-content--active">
+    <div class="menu__items-content" routerLinkActive="--active" routerLink="/todo" (click)="activeRouter('todo')">
       <img src="assets/icons/to-do-list.svg" alt="icon" />
       <p>Todo</p>
     </div>

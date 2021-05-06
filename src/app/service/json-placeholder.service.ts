@@ -2,10 +2,9 @@ import { Injectable } from '@angular/core';
 
 @Injectable({ providedIn: 'root' })
 export class JsonPlaceholderService {
-  private _urlBase = 'https://jsonplaceholder.typicode.com/posts';
 
-  public async getAllListingOfPosts() {
-    const response = await fetch(`${this._urlBase}`);
+  public async getAllListingOfItems(endpoint: string) {
+    const response = await fetch(`https://jsonplaceholder.typicode.com/${endpoint}`);
     const data = await response.json();
 
     return data;
