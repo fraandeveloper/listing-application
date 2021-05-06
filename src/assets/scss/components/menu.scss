@@ -1,0 +1,28 @@
+.menu__items-content {
+  span {
+    @include flexbox();
+    @include flex-direction(row);
+    @include align-items(center);
+    @include justify-content(flex-start);
+
+    width: 100%;
+    > img {
+      width: 24px;
+      margin: { right: 25px; }
+    }
+    p {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 400;
+      @include font-size(13px);
+      color: #7c809f;
+      @include transition(color .3s ease-in);
+    }
+    &.--active {
+      cursor: pointer;
+      background-color:#222753;
+      p {
+        color: #fbfdff;
+      }
+    }
+  }
+}

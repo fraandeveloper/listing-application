@@ -12,12 +12,10 @@ export class MenuComponent implements OnInit {
   constructor(private _router: Router) { }
 
   ngOnInit(): void {
-    console.log(this._router);
-
-    this.activeRouter(this._router.url.substr(1));
+    this.activedRouter(this._router.url.substr(1));
   }
 
-  public activeRouter(router?: string): void {
+  public activedRouter(router: string): void {
     this.router.emit(router);
   }
 }

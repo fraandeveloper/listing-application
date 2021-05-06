@@ -1,1 +1,9 @@
-<p>albums works!</p>
+<section class="albums">
+  <div class="albums__container --albums">
+    <app-card [props]="album" *ngFor="let album of currentItemsToShow"></app-card>
+  </div>
+  <div class="container-main__pagination">
+    <mat-paginator (page)="handlePageEvent($event)" [length]="100" [pageSize]="5" [pageSizeOptions]="[5, 10, 25, 100]">
+    </mat-paginator>
+  </div>
+</section>

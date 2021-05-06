@@ -1,17 +1,6 @@
 <section class="posts">
   <div class="posts__container">
-    <mat-card class="example-card" *ngFor="let post of currentItemsToShow">
-      <mat-card-header>
-        <div mat-card-avatar class="example-header-image"></div>
-        <mat-card-title>{{ post?.title }}</mat-card-title>
-        <mat-card-subtitle>Post {{ post?.id }}</mat-card-subtitle>
-      </mat-card-header>
-      <mat-card-content>
-        <p>
-          {{ post?.body }}
-        </p>
-      </mat-card-content>
-    </mat-card>
+    <app-card [props]="post" *ngFor="let post of currentItemsToShow"></app-card>
   </div>
   <div class="container-main__pagination">
     <mat-paginator (page)="handlePageEvent($event)" [length]="100" [pageSize]="5" [pageSizeOptions]="[5, 10, 25, 100]">

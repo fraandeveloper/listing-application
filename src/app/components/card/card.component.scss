@@ -1,0 +1,36 @@
+@import '~src/assets/scss/core/mixins/mixins';
+@import '~src/assets/scss/core/variables/variables';
+
+mat-card {
+  box-shadow: 0 6px 6px -5px rgb(0 0 0 / 17%);
+  @include border-radius(10px);
+  margin: { bottom: 20px; }
+}
+
+.card {
+  &-image {
+    background-image: url('https://picsum.photos/200');
+    background-size: cover;
+  }
+  mat-card-title {
+    &.--ellipsis {
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+      width: 200px;
+    }
+    text-transform: capitalize;
+    
+  }
+  mat-card-content {
+    p {
+      padding: 0 0 0 55px;
+      color: #8a96a0;
+    }
+  }
+}
+
+mat-chip {
+  text-align: center;
+  max-width: 120px;
+}

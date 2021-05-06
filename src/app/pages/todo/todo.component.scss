@@ -1,0 +1,29 @@
+@import '~src/assets/scss/core/mixins/mixins';
+@import '~src/assets/scss/core/variables/variables';
+
+:host {
+  overflow-y: auto;
+}
+
+.todo {
+  @include flexbox();
+  @include flex-direction(column);
+
+  width: 100%;
+  height: 100%;
+  background-color: #edeff3;
+  &__container {
+    @include flexbox();
+    @include flex-direction(column);
+
+    height: calc(100% - 55px);
+    overflow-y: auto;
+    padding: 15px;
+
+    &.--todos {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 20px;
+    }
+  }
+}

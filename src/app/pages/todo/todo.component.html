@@ -1,1 +1,9 @@
-<p>todo works!</p>
+<section class="todo">
+  <div class="todo__container --todos">
+    <app-card [props]="todo" *ngFor="let todo of currentItemsToShow"></app-card>
+  </div>
+  <div class="container-main__pagination">
+    <mat-paginator (page)="handlePageEvent($event)" [length]="100" [pageSize]="5" [pageSizeOptions]="[5, 10, 25, 100]">
+    </mat-paginator>
+  </div>
+</section>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-main',
@@ -6,12 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main.component.scss']
 })
 export class MainComponent {
-  public routerOfImage = '';
+  public imageRoute = '';
 
   constructor() { }
 
-  public routerAside(evt): void {
-    console.log(evt);
-    this.routerOfImage = evt;
+  public routerAside(router: string): void {
+    this.imageRoute = router;
   }
 }

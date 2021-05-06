@@ -1,0 +1,18 @@
+<mat-card class="card">
+  <mat-card-header>
+    <div mat-card-avatar class="card-image"></div>
+    <mat-card-title [ngClass]="{'--ellipsis' : router === 'album' || router === 'todo'}">{{ props?.title }}
+    </mat-card-title>
+    <mat-card-subtitle>Item {{ props?.id }}</mat-card-subtitle>
+  </mat-card-header>
+
+  <mat-card-content>
+    <p *ngIf="props?.body">
+      {{ props?.body }}
+    </p>
+    <mat-chip-list *ngIf="router === 'todo'" aria-label="Fish selection">
+      <mat-chip color="{{props?.completed ? 'primary' : 'warn'}}">{{
+        props?.completed ? 'Completed' : 'Not completed' }}</mat-chip>
+    </mat-chip-list>
+  </mat-card-content>
+</mat-card>

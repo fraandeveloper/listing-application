@@ -3,17 +3,22 @@
     <p><b>L</b>ist <b>A</b>pplication</p>
   </div>
   <div class="menu__items">
-    <div class="menu__items-content" routerLinkActive="--active" routerLink="/post" (click)="activeRouter('post')">
+    <button class="menu__items-content" mat-button routerLinkActive="--active" routerLink="/post"
+      (click)="activedRouter('post')">
       <img src="assets/icons/post.svg" alt="icon" />
       <p>Posts</p>
-    </div>
-    <div class="menu__items-content" routerLinkActive="--active" routerLink="/album" (click)="activeRouter('album')">
+    </button>
+
+    <button class="menu__items-content" mat-button routerLinkActive="--active" routerLink="/album"
+      (click)="activedRouter('album')">
       <img src="assets/icons/album.svg" alt="icon" />
       <p>Albums</p>
-    </div>
-    <div class="menu__items-content" routerLinkActive="--active" routerLink="/todo" (click)="activeRouter('todo')">
+    </button>
+
+    <button class="menu__items-content" mat-button routerLinkActive="--active" routerLink="/todo"
+      (click)="activedRouter('todo')">
       <img src="assets/icons/to-do-list.svg" alt="icon" />
       <p>Todo</p>
-    </div>
+    </button>
   </div>
 </section>

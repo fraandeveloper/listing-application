@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
 import { Posts } from 'src/app/interfaces/posts';
-
 import { JsonPlaceholderService } from 'src/app/service/json-placeholder.service';
 
 @Component({
@@ -10,36 +9,30 @@ import { JsonPlaceholderService } from 'src/app/service/json-placeholder.service
   styleUrls: ['./posts.component.scss']
 })
 export class PostsComponent implements OnInit {
-  public posts: Posts[] = [];
+  private _posts: Posts[] = [];
   public currentItemsToShow = [];
 
   constructor(private _jsonPlaceholderService: JsonPlaceholderService) { }
 
   ngOnInit(): void {
     this._listPosts();
-    this.currentItemsToShow = this.posts;
+    this.currentItemsToShow = this._posts;
   }
 
   private _listPosts(): void {
     this._jsonPlaceholderService
       .getAllListingOfItems('posts')
-      .then((data: Posts[]) => {
-        if (data.length > 0) {
-          data.map((post: any) => {
-            this.posts.push({
-              title: post.title,
-              body: post.body,
-              id: post.id,
-              userId: post.userId
-            })
-          })
-        }
+      .then((post: Posts[]) => {
+        if (!post.length) { return this._posts = []; }
+        post.forEach(post => {
+          this._posts.push(post);
+        });
       })
       .catch(err => console.log('Internal error when listing posts', err));
   }
 
   public handlePageEvent(evt): void {
-    this.currentItemsToShow = this.posts.slice(evt.pageIndex * evt.pageSize, evt.pageIndex * evt.pageSize + evt.pageSize)
+    this.currentItemsToShow = this._posts
+      .slice(evt.pageIndex * evt.pageSize, evt.pageIndex * evt.pageSize + evt.pageSize)
   }
-
 }

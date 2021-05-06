@@ -3,7 +3,7 @@
 
 
 :host {
-  @include flex-basis(400px);
+  @include flex-basis(350px);
   @include box-shadow(0 0 20px 15px rgba($color-shadow, 0.4));
 }
 
@@ -27,10 +27,10 @@
       @include flex-direction(column);
       @include justify-content(center);
 
-      width: 400px;
+      width: 350px;
       height: 100%;
       img {
-        max-width: 400px;
+        max-width: 340px;
         width: 100%;
 
         @include transition(animation 0.5s ease-in-out);

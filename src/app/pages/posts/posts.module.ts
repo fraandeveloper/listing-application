@@ -6,16 +6,16 @@ import { PostsComponent } from './posts.component';
 import { PostsRoutingModule } from './posts.rounting.module';
 
 import { MatTabsModule } from '@angular/material/tabs';
-import { MatCardModule } from '@angular/material/card';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { ComponentsModule } from 'src/app/components/components.module';
 
 @NgModule({
   declarations: [PostsComponent],
   imports: [
     CommonModule,
     PostsRoutingModule,
+    ComponentsModule,
     MatTabsModule,
-    MatCardModule,
     MatPaginatorModule,
   ],
   exports: [RouterModule, PostsComponent],
