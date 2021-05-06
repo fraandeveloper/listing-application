@@ -21,6 +21,6 @@ The Angular CLI includes a server, so that you can build and serve your app loca
     
 2.  Run the following command:
 
-`cd listing-application `
+`cd listing-application ` <br />
 `$ npm install`
 `$ ng serve`
