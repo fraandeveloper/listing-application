@@ -1,27 +1,26 @@
-# ListingApplication
+# Welcome to List Application!
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.11.
+This web application lists the resources of the [{JSON} Placeholder](https://jsonplaceholder.typicode.com/) API.
+Developed with the latest version of angular and material design.
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+# Getting started
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+You use the Angular CLI to create projects, generate application and library code, and perform a variety of ongoing development tasks such as testing, bundling, and deployment.
 
-## Build
+To install the Angular CLI, open a terminal window and run the following command:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+`$ npm install -g @angular/cli`
 
-## Running unit tests
+## Run the application
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+The Angular CLI includes a server, so that you can build and serve your app locally.
 
-## Running end-to-end tests
+1.  Navigate to the workspace folder, such as  `list-application`.
+    
+2.  Run the following command:
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+`cd list-application `
+`$ npm install`
+`$ ng serve`
